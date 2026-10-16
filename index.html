@@ -1,0 +1,740 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="color-scheme" content="dark" />
+        <title>Surcast | Internet radio broadcast management</title>
+        <meta
+            name="description"
+            content="Surcast is free, open-source internet radio broadcast management software. Stations, AutoDJ, scheduling, Icecast streaming and listener statistics in one Docker container."
+        />
+        <link rel="icon" type="image/png" href="assets/sur-logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
+    <body>
+        <div class="navbar">
+            <nav>
+                <a class="brand" href="#top" aria-label="Surcast home">
+                    <img
+                        src="assets/sur-logo.png"
+                        alt=""
+                        width="38"
+                        height="38"
+                    />
+                    <span class="brand-name">Surcast</span>
+                </a>
+                <ul class="nav-links">
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#self-host">Self-host</a></li>
+                    <li><a href="#status">Status</a></li>
+                    <li>
+                        <a
+                            class="nav-cta"
+                            href="https://github.com/Radio-Sur/surcast"
+                            target="_blank"
+                            rel="noopener"
+                            >GitHub</a
+                        >
+                    </li>
+                </ul>
+                <button
+                    class="burger"
+                    aria-label="Toggle menu"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+
+        <header id="top">
+            <div class="hero-cont">
+                <div class="hero-text">
+                    <div class="hero-brand">
+                        <img
+                            src="assets/sur-logo.png"
+                            alt=""
+                            width="84"
+                            height="84"
+                        />
+                        <h1>Surcast</h1>
+                    </div>
+                    <p class="tagline">Internet radio, minus the headache.</p>
+                    <p class="subtitle">
+                        Free, open-source broadcast management: run stations,
+                        schedule shows, let AutoDJ fill the gaps and stream to
+                        Icecast. All from one container.
+                    </p>
+                    <div class="buttons">
+                        <a class="button ghost" href="#self-host"
+                            >Get started</a
+                        >
+                        <a
+                            class="button primary"
+                            href="https://github.com/Radio-Sur/surcast"
+                            target="_blank"
+                            rel="noopener"
+                            >View on GitHub</a
+                        >
+                    </div>
+                </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <div class="player-card main">
+                        <div class="np-top">
+                            <span class="np-caption">NOW PLAYING</span>
+                            <span class="np-listeners">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="16"
+                                    height="16"
+                                    aria-hidden="true"
+                                >
+                                    <use href="assets/icons/headphones.svg#i" />
+                                </svg>
+                                <strong>128</strong>
+                            </span>
+                        </div>
+                        <div class="np-song">
+                            <div class="np-song-text">
+                                <div class="np-title">Night Drive</div>
+                                <div class="np-artist">
+                                    Neon Coast · After Hours
+                                </div>
+                            </div>
+                            <span class="np-conn"></span>
+                            <span class="np-skip">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="24"
+                                    height="24"
+                                    aria-hidden="true"
+                                >
+                                    <use href="assets/icons/skip-next.svg#i" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="progress"><i></i></div>
+                        <div class="np-times">
+                            <span>1:07</span><span>3:51</span>
+                        </div>
+                    </div>
+                    <div class="player-card mini">
+                        <div class="upcoming-title">UPCOMING (14)</div>
+                        <div class="song-row">
+                            <span class="song-num">1</span>
+                            <div class="song-main">
+                                <div class="song-title">Static Bloom</div>
+                                <div class="song-sub">
+                                    Paper Moons · Singles
+                                </div>
+                            </div>
+                            <span class="song-time">3:47</span>
+                        </div>
+                        <div class="song-row">
+                            <span class="song-num">2</span>
+                            <div class="song-main">
+                                <div class="song-title">Glass Horizon</div>
+                                <div class="song-sub">
+                                    Neon Coast · After Hours
+                                </div>
+                            </div>
+                            <span class="song-time">4:12</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-down">
+                <a href="#features" aria-label="Scroll to features">
+                    <svg viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="assets/icons/chevron-down.svg#i" />
+                    </svg>
+                </a>
+            </div>
+            <svg
+                class="wave hero"
+                viewBox="0 0 1440 90"
+                preserveAspectRatio="none"
+                aria-hidden="true"
+            >
+                <use href="assets/icons/wave-rise.svg#i" />
+            </svg>
+        </header>
+
+        <main>
+            <!-- ============ FEATURES ============ -->
+            <section class="features" id="features">
+                <div class="wrap">
+                    <div class="section-head"><h1>Features</h1></div>
+                    <div class="feature-list">
+                        <div class="feature-row">
+                            <div class="feature">
+                                <div class="feature-text">
+                                    <div class="feature-title">
+                                        Stations &amp; live control
+                                    </div>
+                                    <div class="feature-desc">
+                                        Run multiple stations from one panel.
+                                        Start and stop streams, see live status,
+                                        now-playing and the upcoming queue
+                                        update in real time.
+                                    </div>
+                                </div>
+                                <div class="preview" aria-hidden="true">
+                                    <div class="window-bar">
+                                        <i></i><i></i><i></i>
+                                    </div>
+                                    <div class="station-name">
+                                        Midnight FM
+                                        <span class="status-chip live"
+                                            >LIVE</span
+                                        >
+                                    </div>
+                                    <div class="station-desc">
+                                        Chill synthwave, nightly 20:00–02:00.
+                                    </div>
+                                    <div class="station-actions">
+                                        <span class="station-btn stop"
+                                            >Stop</span
+                                        >
+                                        <span class="station-btn">Restart</span>
+                                        <span class="station-btn">Edit</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feature-row reverse">
+                            <div class="feature">
+                                <div class="preview" aria-hidden="true">
+                                    <div class="window-bar">
+                                        <i></i><i></i><i></i>
+                                    </div>
+                                    <div class="schedule-title">
+                                        Scheduled events
+                                    </div>
+                                    <div class="event">
+                                        <div class="event-text">
+                                            <div class="event-name">
+                                                Morning show
+                                            </div>
+                                            <div class="event-info">
+                                                2026-10-19 · 08:00 – 10:00 ·
+                                                Daily
+                                            </div>
+                                        </div>
+                                        <span class="icon-btn"
+                                            ><svg
+                                                viewBox="0 0 24 24"
+                                                width="18"
+                                                height="18"
+                                                aria-hidden="true"
+                                            >
+                                                <use
+                                                    href="assets/icons/edit.svg#i"
+                                                /></svg
+                                        ></span>
+                                        <span class="icon-btn danger"
+                                            ><svg
+                                                viewBox="0 0 24 24"
+                                                width="18"
+                                                height="18"
+                                                aria-hidden="true"
+                                            >
+                                                <use
+                                                    href="assets/icons/delete.svg#i"
+                                                /></svg
+                                        ></span>
+                                    </div>
+                                    <div class="event">
+                                        <div class="event-text">
+                                            <div class="event-name">
+                                                News block
+                                            </div>
+                                            <div class="event-info">
+                                                2026-10-19 · 12:00 – 12:15 ·
+                                                Daily
+                                            </div>
+                                        </div>
+                                        <span class="icon-btn"
+                                            ><svg
+                                                viewBox="0 0 24 24"
+                                                width="18"
+                                                height="18"
+                                                aria-hidden="true"
+                                            >
+                                                <use
+                                                    href="assets/icons/edit.svg#i"
+                                                /></svg
+                                        ></span>
+                                        <span class="icon-btn danger"
+                                            ><svg
+                                                viewBox="0 0 24 24"
+                                                width="18"
+                                                height="18"
+                                                aria-hidden="true"
+                                            >
+                                                <use
+                                                    href="assets/icons/delete.svg#i"
+                                                /></svg
+                                        ></span>
+                                    </div>
+                                </div>
+                                <div class="feature-text">
+                                    <div class="feature-title">
+                                        AutoDJ &amp; scheduling
+                                    </div>
+                                    <div class="feature-desc">
+                                        Plan shows with recurring events and let
+                                        AutoDJ cover the gaps automatically. The
+                                        queue drains, refills and keeps playing,
+                                        so your station never goes silent at 3
+                                        AM.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feature-row">
+                            <div class="feature">
+                                <div class="feature-text">
+                                    <div class="feature-title">Autocue</div>
+                                    <div class="feature-desc">
+                                        Surcast trims leading and trailing
+                                        silence, levels track loudness, and
+                                        overlaps the tails. Flip the station to
+                                        Autocue mode and the mix flows by
+                                        itself, at one steady volume.
+                                    </div>
+                                </div>
+                                <div class="preview" aria-hidden="true">
+                                    <div class="window-bar">
+                                        <i></i><i></i><i></i>
+                                    </div>
+                                    <div class="song-row">
+                                        <div class="song-main">
+                                            <div class="song-title">
+                                                Night Drive
+                                            </div>
+                                            <div class="song-sub">
+                                                Neon Coast · After Hours
+                                            </div>
+                                        </div>
+                                        <span class="song-time">3:51</span>
+                                    </div>
+                                    <div class="song-row">
+                                        <div class="song-main">
+                                            <div class="song-title">
+                                                Static Bloom
+                                            </div>
+                                            <div class="song-sub">
+                                                Paper Moons · Singles
+                                            </div>
+                                        </div>
+                                        <span class="song-time">3:47</span>
+                                    </div>
+                                    <div class="song-row">
+                                        <div class="song-main">
+                                            <div class="song-title">
+                                                Glass Horizon
+                                            </div>
+                                            <div class="song-sub">
+                                                Neon Coast · After Hours
+                                            </div>
+                                        </div>
+                                        <span class="song-time">4:12</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feature-row reverse">
+                            <div class="feature">
+                                <div
+                                    class="preview terminal"
+                                    aria-hidden="true"
+                                >
+                                    <div class="window-bar">
+                                        <i></i><i></i><i></i>
+                                    </div>
+                                    <p>
+                                        <span>$</span> docker compose up --build
+                                    </p>
+                                    <p class="dim">▸ backend · api :80</p>
+                                    <p class="dim">▸ icecast · stream :8000</p>
+                                    <p class="ok">✓ on air — /midnight-fm</p>
+                                </div>
+                                <div class="feature-text">
+                                    <div class="feature-title">
+                                        Icecast streaming
+                                    </div>
+                                    <div class="feature-desc">
+                                        A GStreamer pipeline encodes and pushes
+                                        your mix straight to the bundled Icecast
+                                        server. One command boots backend,
+                                        frontend and streaming together.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="feature-row">
+                            <div class="feature">
+                                <div class="feature-text">
+                                    <div class="feature-title">
+                                        Listener statistics
+                                    </div>
+                                    <div class="feature-desc">
+                                        Live and historical stats per station:
+                                        concurrent listeners right now, plus
+                                        24h, 7d and 30d views broken down by
+                                        hour and weekday. See exactly when your
+                                        audience tunes in.
+                                    </div>
+                                </div>
+                                <div class="preview" aria-hidden="true">
+                                    <div class="window-bar">
+                                        <i></i><i></i><i></i>
+                                    </div>
+                                    <div class="stats-head">
+                                        <span class="stats-title"
+                                            >Listeners</span
+                                        >
+                                        <span class="stats-range"
+                                            ><em class="on">24h</em><em>7d</em
+                                            ><em>30d</em></span
+                                        >
+                                    </div>
+                                    <div class="stats-now">Listening now</div>
+                                    <div class="stats-total">128</div>
+                                    <img
+                                        class="stats-chart"
+                                        src="assets/icons/stats-chart.svg"
+                                        alt=""
+                                        aria-hidden="true"
+                                    />
+                                    <div class="stats-hint">
+                                        Mean concurrent connections per station
+                                        in the bucket
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="wave two" aria-hidden="true">
+                <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+                    <use href="assets/icons/wave-rise.svg#i" />
+                </svg>
+            </div>
+
+            <!-- ============ SELF-HOST ============ -->
+            <section class="self-host" id="self-host">
+                <div class="wrap">
+                    <div class="section-head">
+                        <h1>Self-host in minutes</h1>
+                    </div>
+                    <div class="hosting">
+                        <div class="terminal-card">
+                            <div class="window-bar dark">
+                                <i></i><i></i><i></i><span>terminal</span>
+                            </div>
+                            <pre
+                                id="quickstart"
+                            ><code>git clone --recurse-submodules https://github.com/Radio-Sur/surcast.git
+cd surcast
+docker compose up --build</code></pre>
+                            <button
+                                class="button small"
+                                data-copy="#quickstart code"
+                            >
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    width="16"
+                                    height="16"
+                                    aria-hidden="true"
+                                >
+                                    <use href="assets/icons/copy.svg#i" />
+                                </svg>
+                                <span>Copy</span>
+                            </button>
+                        </div>
+                        <div class="hosting-info">
+                            <p>
+                                That's the whole setup. Open the panel, create a
+                                station, upload music and you're on air!
+                            </p>
+                            <table class="ports">
+                                <tr>
+                                    <td><code>:80</code></td>
+                                    <td>panel + API</td>
+                                </tr>
+                                <tr>
+                                    <td><code>:8000</code></td>
+                                    <td>Icecast stream</td>
+                                </tr>
+                            </table>
+                            <div class="hosting-buttons">
+                                <a
+                                    class="button primary"
+                                    href="https://github.com/Radio-Sur/surcast"
+                                    target="_blank"
+                                    rel="noopener"
+                                    >GitHub</a
+                                >
+                                <a
+                                    class="button outline"
+                                    href="https://github.com/Radio-Sur/surcast/pkgs/container/surcast"
+                                    target="_blank"
+                                    rel="noopener"
+                                    >Container image</a
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <div class="wave three" aria-hidden="true">
+                <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+                    <use href="assets/icons/wave-rise.svg#i" />
+                </svg>
+            </div>
+
+            <!-- ============ FEATURE STATUS ============ -->
+            <section class="status-section" id="status">
+                <div class="wrap">
+                    <div class="section-head"><h1>Feature status</h1></div>
+                    <p class="status-lead">
+                        Surcast is in early development. This is what's already
+                        on air and what's coming up next.
+                    </p>
+                    <div class="status-legend">
+                        <span class="legend-item">
+                            <span class="pill done">Done</span>
+                            <span>available now</span>
+                        </span>
+                        <span class="legend-item">
+                            <span class="pill planned">Planned</span>
+                            <span>on the roadmap</span>
+                        </span>
+                    </div>
+                    <div class="table-wrap">
+                        <table class="status-table">
+                            <thead>
+                                <tr>
+                                    <th>Feature</th>
+                                    <th>What it does</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Stations &amp; live control</td>
+                                    <td>
+                                        Run multiple stations, start and stop
+                                        streams, follow live status and
+                                        now-playing in real time.
+                                    </td>
+                                    <td>
+                                        <span class="pill done">Done</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Play queue</td>
+                                    <td>
+                                        Drag-and-drop queue with upcoming
+                                        tracks, history and per-song control.
+                                    </td>
+                                    <td>
+                                        <span class="pill done">Done</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>AutoDJ</td>
+                                    <td>
+                                        Fills gaps automatically from the
+                                        library or playlist, so your station
+                                        never goes silent
+                                    </td>
+                                    <td>
+                                        <span class="pill done">Done</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Scheduling &amp; events</td>
+                                    <td>
+                                        Recurring shows on a weekly calendar
+                                        with playlist sources.
+                                    </td>
+                                    <td>
+                                        <span class="pill done">Done</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Playlists</td>
+                                    <td>
+                                        Build plain or weighted playlists from
+                                        the library.
+                                    </td>
+                                    <td>
+                                        <span class="pill done">Done</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Autocue analysis</td>
+                                    <td>
+                                        Loudness-based cue-in/out detection,
+                                        track overlays and volume leveling.
+                                    </td>
+                                    <td>
+                                        <span class="pill done">Done</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Icecast streaming</td>
+                                    <td>
+                                        GStreamer pipeline pushing to the
+                                        bundled Icecast server.
+                                    </td>
+                                    <td>
+                                        <span class="pill done">Done</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Listener statistics</td>
+                                    <td>
+                                        Live counts plus 24h / 7d / 30d history
+                                        per station.
+                                    </td>
+                                    <td>
+                                        <span class="pill done">Done</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>API access</td>
+                                    <td>
+                                        Token-based API access for scripts and
+                                        integrations.
+                                    </td>
+                                    <td>
+                                        <span class="pill done">Done</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Mixing</td>
+                                    <td>
+                                        Mix the station's stream with other
+                                        stations, or plug in a microphone or
+                                        line source.
+                                    </td>
+                                    <td>
+                                        <span class="pill planned"
+                                            >Planned</span
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Built-in TTS</td>
+                                    <td>
+                                        Spoken announcements and news from a
+                                        built-in text-to-speech voice.
+                                    </td>
+                                    <td>
+                                        <span class="pill planned"
+                                            >Planned</span
+                                        >
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Metadata sharing</td>
+                                    <td>
+                                        Share playlists, now-playing, queue and
+                                        history metadata with websites and
+                                        players.
+                                    </td>
+                                    <td>
+                                        <span class="pill planned"
+                                            >Planned</span
+                                        >
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <p class="status-foot">
+                        Missing something?
+                        <a
+                            href="https://github.com/Radio-Sur/surcast/issues"
+                            target="_blank"
+                            rel="noopener"
+                            >Open an issue</a
+                        >
+                    </p>
+                </div>
+            </section>
+
+            <div class="wave four" aria-hidden="true">
+                <svg viewBox="0 0 1440 90" preserveAspectRatio="none">
+                    <use href="assets/icons/wave-rise.svg#i" />
+                </svg>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-links">
+                <a
+                    href="https://github.com/Radio-Sur/surcast"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="assets/icons/github.svg#i" />
+                    </svg>
+                    <span class="link-text"
+                        ><span class="link-name">GitHub</span
+                        ><span class="link-sub">Radio-Sur/surcast</span></span
+                    >
+                </a>
+                <a
+                    href="https://github.com/Radio-Sur/surcast/pkgs/container/surcast"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true">
+                        <use href="assets/icons/docker.svg#i" />
+                    </svg>
+                    <span class="link-text"
+                        ><span class="link-name">Container</span
+                        ><span class="link-sub">ghcr.io/radio-sur</span></span
+                    >
+                </a>
+                <a
+                    href="https://github.com/Radio-Sur/surcast/blob/main/LICENSE"
+                    target="_blank"
+                    rel="noopener"
+                >
+                    <svg class="icon" viewBox="0 0 640 512" aria-hidden="true">
+                        <use href="assets/icons/scales.svg#i" />
+                    </svg>
+                    <span class="link-text"
+                        ><span class="link-name">License</span
+                        ><span class="link-sub">GPL 3.0</span></span
+                    >
+                </a>
+            </div>
+        </footer>
+
+        <script src="js/app.js"></script>
+    </body>
+</html>
