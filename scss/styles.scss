@@ -814,6 +814,12 @@ header {
     align-items: flex-end;
 }
 
+@media screen and (min-width: 901px) {
+    .reverse .feature-title::before {
+        content: none;
+    }
+}
+
 .reverse .feature-title::after {
     content: "";
     border-right: 4px solid #f48fb1;
